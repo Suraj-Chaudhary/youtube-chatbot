@@ -1,6 +1,7 @@
 from langchain_core.prompts import PromptTemplate
 
 def _prompt_template():
+    """Returns the Prompt Template."""
     return PromptTemplate(
         template = """You are a helpful assistant. 
         Answer ONLY from the provided transcript context.
