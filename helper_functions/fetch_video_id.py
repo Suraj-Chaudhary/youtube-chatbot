@@ -1,7 +1,7 @@
 import re
 from urllib.parse import urlparse, parse_qs
 
-def get_youtube_video_id(url):
+def get_youtube_video_id(url: str):
     """
     Extract the video ID from a YouTube URL.
     Supports formats like:
@@ -35,13 +35,6 @@ def get_youtube_video_id(url):
 
 if __name__ == "__main__":
     # Example usage
-    urls = [
-        "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "https://youtu.be/dQw4w9WgXcQ",
-        "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "https://www.youtube.com/shorts/dQw4w9WgXcQ",
-        "https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=30s",
-    ]
+    url = "https://www.youtube.com/watch?v=v1wZwxY3CMg"
 
-    for u in urls:
-        print(u, "->", get_youtube_video_id(u))
+    print(get_youtube_video_id(url=url))
